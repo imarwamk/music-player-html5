@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        body {
+            background-color: #000000d2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .c1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: rgba(21, 2, 2, 0.927);
+            background-color: rgba(255, 255, 255, 0.616);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px;
+            gap: 20px;
+            max-width: 1100px;
+            width: 90%;
+        }
+
+        .h {
+            width: 100%;
+            text-align: center;
+            color: rgba(6, 6, 6, 0.7);
+            text-shadow: 2px 2px 2px rgb(251, 248, 248);
+            margin-bottom: 10px;
+        }
+
+        .track {
+            flex: 1 1 250px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #ffffffd9;
+            box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+        }
+
+        .track:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .pic {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .c1 {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .track {
+                width: 100%;
+                max-width: 90%;
+            }
+
+            .h h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .h h1 {
+                font-size: 1.5rem;
+            }
+
+            .track {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">
+        <div class="h">
+            <h1>Music Player</h1>
+        </div>
+
+        <div class="track">
+            <img class="pic" src="img/1d.png" alt="">
+            <p>One Direction - Home</p>
+            <audio controls>
+                <source src="audio/1d.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="track">
+            <img class="pic" src="img/bi.png" alt="">
+            <p>Billie Eilish - CHIHIRO</p>
+            <audio controls>
+                <source src="audio/bi.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="track">
+            <img class="pic" src="img/ha.png" alt="">
+            <p>Harry Styles - Sign of the Times</p>
+            <audio controls>
+                <source src="audio/a1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+
+</html>
